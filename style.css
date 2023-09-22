@@ -87,7 +87,10 @@ main {
     background-color: rgba(14, 35, 51, 0.5);
     left: 0px;
     right: 0px;
-}   
+}
+.carousel-caption h3, p{
+    display: flex;
+}
 #destacados{
     background-color: #037d40;
     margin: 0 8%;
