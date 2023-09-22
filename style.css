@@ -88,8 +88,14 @@ main {
     left: 0px;
     right: 0px;
 }
-.carousel-caption h3, p{
-    display: flex;
+.carousel-caption p{
+    font-size: 16px !important;
+}
+
+@media only screen and (max-width: 576px) {
+    .carousel-caption p {
+        display: none;
+    }
 }
 #destacados{
     background-color: #037d40;
