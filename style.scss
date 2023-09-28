@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&family=Lilita+One&family=Merriweather+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+//Fuentes 
+$fuente1: 'Heebo', sans-serif;
+$fuente2: 'Lilita One', cursive;
+$fuente3: 'Merriweather Sans', sans-serif;
+
+// paleta colores inicio
+$color1: #037d40;
+$color2: #eff4f7;
+$color3: #0e2333;
+$color4: #b92823;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: $color2;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        color: $color1;
+        font-family: $fuente2;
+    }
+
+    h2 {
+        color: $color1;
+        font-family: $fuente3;
+        font-weight: bold;
+    }
+
+    h3, h4, h5, p {
+        font-family: $fuente1;
+    }
+}
+.navbar {
+    background-color: $color1 !important;
+    border-bottom: 1px solid $color3;
+    border-top: 1px solid $color3;
+    box-shadow: 5px 0 10px rgba(14, 35, 51, .8);
+    color: $color2;
+
+    li {
+        border-radius: 3px;
+
+        a {
+        color: #eff4f7 !important;
+        font-family: 'Heebo', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        margin: 0 5px;
+        }
+
+        &:hover, &.active {
+        background-color: #0e2333;
+        transition: .3s;
+        }
+    }
+}
+.collapse {
+    display: flex;
+}
+#collapsibleNavbar {
+    text-align: center;
+    justify-content: center;
+    color: #eff4f7;
+}  
+/* main index inicia */
+main {
+    flex: 1;
+}
+
+.twitter-timeline-container {
+    max-width: 100%;
+    width: 100%;
+    overflow: auto;
+    position: relative;
+    padding-bottom: 154%;
+
+    
+    .loader {
+    font-size: 40px;
+    color: $color3;
+    text-align: center;
+    }
+
+    .twitter-timeline {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.carousel-caption {
+    background-color: rgba(14, 35, 51, 0.5);
+    left: 0px;
+    right: 0px;
+
+    p {
+        font-size: 16px !important;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .carousel-caption {
+        p {
+            display: none;
+        }
+    }
+}
+
+#destacados {
+    background-color: $color1;
+    margin: 0 8%;
+
+    h2 {
+        color: $color2;
+        text-align: center;
+        justify-content: center;
+    }
+
+    li {
+        color: $color2;
+        font-family: $fuente1;
+    }
+}
+
+.videos {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    h5 {
+        text-align: center;
+        justify-content: center;
+        color: $color3;
+    }
+
+    iframe {
+        margin-bottom: 10px;
+    }
+}
+
+/* main index fin */
+/* main nosotros inicia */
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.nosotros {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4,);
+
+    .item {
+        background-color: $color2;
+        border: 3px solid $color1;
+        border-radius: 10px;
+        margin: 30px 25px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    @media only screen and (min-width: 576px) {
+        grid-template-columns: 1fr 1fr;
+
+        .item3 {
+            grid-column: 1/3;
+        }
+    }
+
+    @media only screen and (min-width: 1080px) {
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .item3 {
+            grid-column: 3/4;
+        }
+    }
+}
+
+/* main nosotros fin */
+/* main historia inicia */
+.historia {
+    text-align: center;
+    justify-content: center;
+
+    h2 {
+        margin: 0 auto;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 0 auto;
+        padding: 20px;
+        color: $color3;
+    }
+
+    img {
+        margin: 20px;
+        border-radius: 10px;
+    }
+}
+
+/* main historia fin */
+/* main matricula inicio */
+.matricula {
+    text-align: center;
+    justify-content: center;
+
+    h2 {
+        margin: 0;
+        padding: 20px;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 20px;
+        margin: 0 auto;
+        padding: 25px;
+        color: $color3;
+    }
+
+    img {
+        height: 209px;
+        margin: 20px;
+        border-radius: 10px;
+    }
+}
+
+/* main matricula fin */
+/* main contacto inicia */
+.ubicacion, .mensaje {
+    text-align: center;
+    justify-content: center;
+}
+
+main section {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    letter-spacing: 2px;
+}
+
+.ubicacion #mapa {
+    border: 5px solid $color1;
+    border-radius: 10px;
+}
+
+.ubicacion h5 {
+    color: $color3;
+    font-size: 20px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+#escribe {
+    margin: 15%;
+    text-align: center;
+    justify-content: center;
+
+    article {
+        font-weight: 600;
+        font-size: 15px;
+        color: $color3;
+    }
+
+    textarea {
+        width: 700px;
+        height: 180px;
+        padding: 5px;
+    }
+
+    input {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+}
+
+/* main contacto fin */
+footer {
+    background-color: $color1;
+    color: $color2;
+    text-align: center;
+
+    h2 {
+        color: $color2;
+    }
+
+    a {
+        color: $color2;
+        text-decoration: none;
+        font-size: 30px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            color: $color3 !important;
+        }
+    }
+}
+
+.subir i{
+    height: 40px;
+    width: 40px;
+    background-color: $color4;
+    color: $color2;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    text-align: center ;
+    line-height: 40px;
+    font-size: 30px;
+    box-shadow: 5px 0 5px rgba(14, 35, 51, .8)
+}

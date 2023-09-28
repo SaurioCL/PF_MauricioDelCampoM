@@ -13,38 +13,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="style.css" />
     <title>Escuela Hna. María Goretti</title>
+    <meta name="description" content="Escuela Básica Municipal ubicada en la comuna de Recoleta, dentro de la población Angela Davis">
+    <meta name="keywords" content="Escuela, Escuela Básica, Escuela Municipal, Kinder, Educación, Integración, PIE, Matrícula, SAE">
 </head>
 <body>
     <div class="p-5 text-center">
         <h1>Escuela Básica Hna. María Goretti</h1>
     </div>
 <!-- navbar inicia -->
-    <nav class="navbar navbar-expand-sm navbar-dark">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="active nav-item">
-                <a class="nav-link" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./pages/historia.html">Historia</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./pages/matricula.html">Matrícula</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-            </li>
-        </ul>
-        </div>
-    </div>
-    </nav>
+<nav class="navbar navbar-expand-sm navbar-dark">
+  <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="active nav-item">
+              <a class="nav-link" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="./pages/nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="./pages/historia.html">Historia</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="./pages/matricula.html">Matrícula</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+          </li>
+      </ul>
+      </div>
+  </div>
+  </nav>
 <!-- navbar fin -->
 <!-- main inicio-->
 <main class="flex-shrink-0">
@@ -94,8 +96,9 @@
       <div class="col-md-4">
         <h2>Noticias/Anuncios</h2>
         <div class="twitter-timeline-container">
-          <a class="twitter-timeline" href="https://twitter.com/Mineduc?ref_src=twsrc%5Etfw">Tweets by Mineduc</a> 
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div class="loader"><i class="fas fa-spinner fa-spin"></i></div> <!-- Ícono animado de Font Awesome -->
+            <a class="twitter-timeline" href="https://twitter.com/Mineduc?ref_src=twsrc%5Etfw"></a> 
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" onload="hideLoader()"></script>
         </div>        
       </div>
   </div>
