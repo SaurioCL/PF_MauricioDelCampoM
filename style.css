@@ -164,22 +164,20 @@ section{
 /* main nosotros fin */
 /* main historia inicia */
 .historia{
-    justify-content: center;
     text-align: center;
+    justify-content: center;
 }
 .historia h2{
     margin: 0 auto;
-    padding: 20px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
-.historia h5{
-    font-size: 20px;
+.historia p{
+    font-size: 18px;
     margin: 0 auto;
     padding: 20px;
     color: #0e2333;
 }
 .historia img{
-    height: 450px;
     margin: 20px;
     border-radius: 10px;
 }
@@ -192,9 +190,9 @@ section{
 .matricula h2{
     margin: 0;
     padding: 20px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
-.matricula h5{
+.matricula p{
     font-size: 20px;
     margin: 0 auto;
     padding: 25px;
@@ -219,7 +217,6 @@ main section{
 }
 .ubicacion #mapa{
     border: 5px solid #037d40;
-    margin: 20px 50px;
     border-radius: 10px;
 }
 .ubicacion h5{
@@ -228,11 +225,13 @@ main section{
     margin: 0 auto;
     padding-bottom: 20px;
 }
-.mensaje{
-    border: 5px solid #037d40;
-    margin: 0 30% 20px 30%
+#escribe{
+    /* border: 5px solid #037d40; */
+    margin: 15%;
+    text-align: center;
+    justify-content: center;
 }
-.mensaje article{
+#escribe article{
     font-weight: 600;
     font-size: 15px;
     color: #0e2333;
@@ -245,6 +244,9 @@ textarea{
 main input{
     padding: 5px;
     margin: 5px;
+}
+button{
+    margin-top: 10px;
 }
 /* main contacto fin */
 footer{
