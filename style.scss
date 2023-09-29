@@ -11,6 +11,28 @@ $color2: #eff4f7;
 $color3: #0e2333;
 $color4: #b92823;
 
+//Animación desvanecimiento
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+//mixins para fuentes y estilos
+@mixin fuente-titulos {
+    font-family: $fuente3;
+    color: $color1;
+    font-weight: bold;
+}
+
+@mixin textos-p{
+    font-family: $fuente1;
+    color: $color3;
+    font-size: 20px;
+}
 
 * {
     margin: 0;
@@ -33,14 +55,16 @@ body {
     }
 
     h2 {
-        color: $color1;
-        font-family: $fuente3;
-        font-weight: bold;
+        @include fuente-titulos;
     }
 
     h3, h4, h5, p {
         font-family: $fuente1;
     }
+}
+//Animacion
+.fade-in {
+    animation: fadeIn .8s ease-in-out;
 }
 .navbar {
     background-color: $color1 !important;
@@ -135,6 +159,8 @@ main {
     li {
         color: $color2;
         font-family: $fuente1;
+        font-size: 20px;
+        margin: 10px 0 10px 0;
     }
 }
 
@@ -174,6 +200,7 @@ section {
         margin: 30px 25px;
         padding: 20px;
         text-align: center;
+        font-size: 20px;
     }
 
     @media only screen and (min-width: 576px) {
@@ -192,7 +219,6 @@ section {
         }
     }
 }
-
 /* main nosotros fin */
 /* main historia inicia */
 .historia {
@@ -201,22 +227,19 @@ section {
 
     h2 {
         margin: 0 auto;
-        letter-spacing: 1px;
     }
 
     p {
-        font-size: 18px;
+        @include textos-p;
         margin: 0 auto;
         padding: 20px;
-        color: $color3;
     }
 
     img {
-        margin: 20px;
+        margin: 10px 0 30px 0;
         border-radius: 10px;
     }
 }
-
 /* main historia fin */
 /* main matricula inicio */
 .matricula {
@@ -226,14 +249,12 @@ section {
     h2 {
         margin: 0;
         padding: 20px;
-        letter-spacing: 1px;
     }
 
     p {
-        font-size: 20px;
+        @include textos-p;
         margin: 0 auto;
         padding: 25px;
-        color: $color3;
     }
 
     img {
@@ -242,7 +263,6 @@ section {
         border-radius: 10px;
     }
 }
-
 /* main matricula fin */
 /* main contacto inicia */
 .ubicacion, .mensaje {
@@ -269,8 +289,12 @@ main section {
     padding-bottom: 20px;
 }
 
+.center-textarea {
+    text-align: center;
+}
+
 #escribe {
-    margin: 15%;
+    margin: 0 auto;
     text-align: center;
     justify-content: center;
 
@@ -280,22 +304,29 @@ main section {
         color: $color3;
     }
 
-    textarea {
-        width: 700px;
-        height: 180px;
-        padding: 5px;
+    .form-group {
+        text-align: center; /* Alinea el texto a la izquierda en pantallas más pequeñas */
     }
 
-    input {
+    textarea.form-control.center-textarea {
+        width: 100%;
+        max-width: 700px; /* Limita el ancho máximo */
+        height: auto; /* Permite que la altura se ajuste automáticamente */
         padding: 5px;
-        margin: 5px;
+        margin: 0 auto; /* Añade este margen para centrar horizontalmente */
+    }
+
+    input.form-control {
+        width: 100%;
+        max-width: 700px;
+        padding: 5px;
+        margin: 0 auto;
     }
 
     button {
-        margin-top: 10px;
+        margin: 10px 0 10px 0;
     }
 }
-
 /* main contacto fin */
 footer {
     background-color: $color1;
