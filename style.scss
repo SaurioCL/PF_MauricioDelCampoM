@@ -133,8 +133,17 @@ main {
     left: 0px;
     right: 0px;
 
-    p {
+    a {
+        text-decoration: none;
+
+        h3 {
+        color: $color2;
+        }
+
+        p {
+        color: $color2;
         font-size: 16px !important;
+        }
     }
 }
 
@@ -148,7 +157,7 @@ main {
 
 #destacados {
     background-color: $color1;
-    margin: 0 8%;
+    margin: 0 12%;
 
     h2 {
         color: $color2;
@@ -179,19 +188,66 @@ main {
         margin-bottom: 10px;
     }
 }
-
 /* main index fin */
+/* main actividades inicia */
+.actividades{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 20px 0;
+
+    h2{
+        text-align: center;
+        padding: 20px;
+        grid-column: 1/4;
+    }
+
+    .texto{
+        grid-column: 1/3;
+
+        p{
+            @include textos-p;
+            padding: 0 50px 0 50px;
+        }
+    }
+
+    .img{
+        grid-column: 3/4;
+        padding: 20px 50px 20px 0;
+
+        img{
+            border-radius: 10px;
+
+        }
+    }
+
+    @media only screen and (max-width: 1400px) {
+        grid-template-columns: 1fr;
+
+        .texto {
+            grid-column: auto;
+        }
+
+        .img {
+            grid-column: auto;
+            padding-left: 50px;
+        }
+
+    }
+}
+
+/* main actividades fin */
 /* main nosotros inicia */
 section {
     display: flex;
     justify-content: center;
 }
 
-.nosotros {
-    justify-content: center;
+.nosotros-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4,);
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
 
     .item {
         background-color: $color2;
@@ -201,23 +257,46 @@ section {
         padding: 20px;
         text-align: center;
         font-size: 20px;
+        color: $color3;
     }
 
-    @media only screen and (min-width: 576px) {
+    @media only screen and (max-width: 1080px) {
         grid-template-columns: 1fr 1fr;
 
-        .item3 {
+        .item1 {
             grid-column: 1/3;
         }
+
+        .item2, .item3 {
+            grid-column: 1fr;
+        }
+
     }
 
-    @media only screen and (min-width: 1080px) {
-        grid-template-columns: 1fr 1fr 1fr;
+    @media only screen and (max-width: 580px) {
+        grid-template-columns: 1fr;
 
-        .item3 {
-            grid-column: 3/4;
+        .item {
+            grid-column: auto;
         }
     }
+}
+
+.descarga{
+    text-align: center;
+
+    h4{
+        color: $color3;
+    }
+
+    a{
+        margin: 20px;
+        padding: 15px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+
 }
 /* main nosotros fin */
 /* main historia inicia */
@@ -238,6 +317,8 @@ section {
     img {
         margin: 10px 0 30px 0;
         border-radius: 10px;
+        width: 1000px;
+        height: auto;
     }
 }
 /* main historia fin */
@@ -255,10 +336,18 @@ section {
         @include textos-p;
         margin: 0 auto;
         padding: 25px;
+
+    }
+
+    ul{
+        li{
+            @include textos-p;
+            list-style: none;
+        }
     }
 
     img {
-        height: 200px;
+        height: 180px;
         margin: 20px 0 20px 0;
         border-radius: 10px;
     }
