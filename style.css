@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&family=Lilita+One&family=Merriweather+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap");
 @keyframes fadeIn {
   from {
@@ -341,20 +340,21 @@ main section {
   color: #0e2333;
 }
 #escribe .form-group {
-  text-align: center; /* Alinea el texto a la izquierda en pantallas más pequeñas */
+  text-align: center;
 }
 #escribe textarea.form-control.center-textarea {
   width: 100%;
-  max-width: 700px; /* Limita el ancho máximo */
-  height: auto; /* Permite que la altura se ajuste automáticamente */
+  max-width: 700px;
+  height: auto;
   padding: 5px;
-  margin: 0 auto; /* Añade este margen para centrar horizontalmente */
+  margin: 0 auto;
 }
 #escribe input.form-control {
   width: 100%;
   max-width: 700px;
   padding: 5px;
   margin: 0 auto;
+  text-align: center;
 }
 #escribe button {
   margin: 10px 0 10px 0;

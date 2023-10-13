@@ -394,15 +394,15 @@ main section {
     }
 
     .form-group {
-        text-align: center; /* Alinea el texto a la izquierda en pantallas más pequeñas */
+        text-align: center;
     }
 
     textarea.form-control.center-textarea {
         width: 100%;
-        max-width: 700px; /* Limita el ancho máximo */
-        height: auto; /* Permite que la altura se ajuste automáticamente */
+        max-width: 700px; 
+        height: auto;
         padding: 5px;
-        margin: 0 auto; /* Añade este margen para centrar horizontalmente */
+        margin: 0 auto;
     }
 
     input.form-control {
@@ -410,6 +410,7 @@ main section {
         max-width: 700px;
         padding: 5px;
         margin: 0 auto;
+        text-align: center;
     }
 
     button {
