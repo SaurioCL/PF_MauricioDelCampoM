@@ -35,6 +35,15 @@ body h3, body h4, body h5, body p {
   font-family: "Heebo", sans-serif;
 }
 
+#titulo .escudo {
+  width: 130px;
+}
+@media only screen and (max-width: 768px) {
+  #titulo .escudo {
+    width: 100px;
+  }
+}
+
 .fade-in {
   animation: fadeIn 0.8s ease-in-out;
 }

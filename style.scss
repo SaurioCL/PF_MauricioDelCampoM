@@ -63,9 +63,22 @@ body {
     }
 }
 //Animacion
+#titulo{
+    .escudo{
+        width: 130px;
+    }
+
+    @media only screen and (max-width: 768px){
+        .escudo{
+            width: 100px;
+        }
+    }
+}
+
 .fade-in {
     animation: fadeIn .8s ease-in-out;
 }
+
 .navbar {
     background-color: $color1 !important;
     border-bottom: 1px solid $color3;
