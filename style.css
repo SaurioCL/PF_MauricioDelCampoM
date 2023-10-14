@@ -274,11 +274,9 @@ section {
 /* main matricula inicio */
 .matricula {
   text-align: center;
-  justify-content: center;
 }
 .matricula h2 {
   margin: 0;
-  padding: 20px;
 }
 .matricula p {
   font-family: "Heebo", sans-serif;
@@ -292,6 +290,11 @@ section {
   color: #0e2333;
   font-size: 20px;
   list-style: none;
+}
+@media only screen and (max-width: 760px) {
+  .matricula ul li {
+    text-align: left;
+  }
 }
 .matricula img {
   height: 180px;

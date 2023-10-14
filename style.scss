@@ -325,11 +325,9 @@ section {
 /* main matricula inicio */
 .matricula {
     text-align: center;
-    justify-content: center;
 
     h2 {
         margin: 0;
-        padding: 20px;
     }
 
     p {
@@ -339,10 +337,14 @@ section {
 
     }
 
-    ul{
+    ul{ 
         li{
             @include textos-p;
             list-style: none;
+
+        @media only screen and (max-width: 760px){
+            text-align: left;
+        }
         }
     }
 
